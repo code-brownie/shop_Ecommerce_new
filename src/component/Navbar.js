@@ -18,7 +18,7 @@ const Navbar = (props) => {
     return (
         <>
             <div className="header">
-                <div className="container">
+                <div className="Container">
                     <div className="navbar">
                         <div className="logo">
                             <img src="./images/logo9.png" alt="Logo" onClick={() => navigate('/')} style={{ width: '150px' }} />

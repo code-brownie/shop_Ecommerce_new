@@ -86,7 +86,7 @@ const Account = (props) => {
 
     return (
         <div className="account-page">
-            <div className="container">
+            <div className="Container">
                 <div className="row">
                     <div className="col-2">
                         <img src="./images/4877806.png" style={{ width: '100%' }} alt="login" />

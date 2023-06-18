@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../style/upload.css';
 
 function Upload(props) {
+    const {setMessage,handleFoundProduct} = props;
+    console.log(setMessage)
     const [selectedFile, setSelectedFile] = useState(null);
     const [result, setResult] = useState(null);
     // const [image, setImage] = useState([]);
-
+    let foundProduct = false;
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
     };
@@ -23,6 +25,7 @@ function Upload(props) {
             });
 
             const data = await response.json();
+            console.log(data)
             setResult(data);
         } catch (error) {
             console.error(error);
@@ -30,7 +33,9 @@ function Upload(props) {
     };
 
     const getProductStatus = (productName) => {
-        const foundProduct = (props.name.toLowerCase() === productName);
+        foundProduct = (props.name.toLowerCase() === productName);
+        props.setMessage(foundProduct);
+        handleFoundProduct(foundProduct);
         console.log(foundProduct)
 
         if (foundProduct) {
@@ -53,6 +58,7 @@ function Upload(props) {
                         <div key={data.name}>
                             <div>{data.name}</div>
                             {getProductStatus(data.name)}
+
                         </div>
                     ))}
                 </div>

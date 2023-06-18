@@ -11,9 +11,17 @@ import Products from './component/Products';
 import Productsdetail from './component/Productsdetail';
 import { Route, Routes } from "react-router-dom"
 import Alerts from './component/Alerts';
-import Points from './component/Points';
 import { CartProvider } from './component/ContexReducer';
+import About from './component/About';
+import Profile from './component/Profile';
 function App() {
+
+  const [message, setMessage] = useState(null);
+
+  const handleMessageChange = (newMessage) => {
+    setMessage(newMessage);
+  };
+
   const [alert, setAlerts] = useState(null);
   const showAlerts = (message, type) => {
     setAlerts({ message: message, type: type });
@@ -29,11 +37,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/productsdetails" element={<Productsdetail />} />
+          <Route path="/productsdetails" element={<Productsdetail setMessage={handleMessageChange} />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/accounts" element={<Account showAlerts={showAlerts} />} />
-          <Route path="/profile" element={<Points />} />
+          <Route path="/profile" element={<Profile message={message} />} />
           <Route path="/featured" element={<Featured />} />
+          <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
       </>

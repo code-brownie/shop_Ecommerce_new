@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('authToken');
     Navigate('/');
   };
-  // Provide the isLoggedIn state and login/logout functions to the child components
+  
   return (
     <AuthContext.Provider value={{ isLoggedIn, handleLogin, handleLogout,handleSignIn}}>
       {children}

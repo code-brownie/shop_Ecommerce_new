@@ -1,6 +1,6 @@
-
 import argparse
 import io
+import time
 from PIL import Image
 
 import torch
@@ -10,9 +10,6 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-
-
-
 @app.route('/process_image', methods=['POST'])
 def process_image():
     if 'image' not in request.files:
@@ -20,14 +17,15 @@ def process_image():
         return jsonify({'error': 'No image file provided'})
 
     image_file = request.files['image']
-    print(image_file)
     img_bytes = image_file.read()
     img = Image.open(io.BytesIO(img_bytes))
+    start_time = time.time()
     results = model([img])
+    end_time = time.time()
+    processing_time = end_time - start_time
     data = results.pandas().xyxy[0].to_json(orient="records")
-    result = {'result': 'prowal', 'message': 'Image processed successfully'}
-    return data
-    return jsonify(result)
+    print(processing_time)
+    return data;
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Flask app exposing yolov5 models")

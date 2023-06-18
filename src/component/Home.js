@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
     return (
 <div className="header">
-<div className="container">
+<div className="Container">
          <div className='row'>
             <div className="col-2">
                 <h1>Join the<br /> ReNewCycle!</h1>
