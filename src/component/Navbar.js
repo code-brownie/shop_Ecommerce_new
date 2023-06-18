@@ -21,41 +21,47 @@ const Navbar = (props) => {
                 <div className="container">
                     <div className="navbar">
                         <div className="logo">
-                            <img src="./images/logo.png" alt="Logo" onClick={() => navigate('/')} style={{ width: '125px' }} />
+                            <img src="./images/logo9.png" alt="Logo" onClick={() => navigate('/')} style={{ width: '150px' }} />
                         </div>
                         <nav>
                             <ul>
-                                <li>
+                                <li class="list-item">
                                     <Link to="/">Home</Link>
                                 </li>
-                                <li>
+                                <li class="list-item">
                                     <Link to="/products">Products</Link>
                                 </li>
+                                <li class="list-item">
+                                    <Link to="/contacts">Contact</Link>
+                                </li>
+                                <li class="list-item">
+                                    <Link to="/about">About</Link>
+                                </li>
+
                                 {isLoggedIn ? (
                                     <>
-                                        <li>
+                                        <li class="list-item">
                                             <Link to="/profile">Profile</Link>
                                         </li>
-                                        <li style={{ cursor: 'pointer' }} onClick={handleLogoutclick}>
+                                        <li class="list-item" style={{ cursor: 'pointer' }} onClick={handleLogoutclick}>
                                             Logout
                                         </li>
                                     </>
                                 ) : (
                                     <>
                                         <li>
-                                            <Link  to="/accounts">Login</Link>
+                                            <Link to="/accounts">
+                                                <button className="button-style">Login</button>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <Link to="/accounts">Sign Up</Link>
+                                            <Link to="/accounts">
+                                                <button className="button-style">SignUp</button>
+                                            </Link>
                                         </li>
                                     </>
                                 )}
-                                <li>
-                                    <Link to="/contacts">Contact</Link>
-                                </li>
-                                <li>
-                                    <Link to="/about">About</Link>
-                                </li>
+
                             </ul>
                         </nav>
                         {isLoggedIn && (<i className="fa-solid fa-cart-shopping" style={{ cursor: 'pointer' }} onClick={() => navigate('/cart')}></i>)}

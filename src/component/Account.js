@@ -89,7 +89,7 @@ const Account = (props) => {
             <div className="container">
                 <div className="row">
                     <div className="col-2">
-                        <img src="images/image1.png" style={{ width: '100%' }} alt="login" />
+                        <img src="./images/4877806.png" style={{ width: '100%' }} alt="login" />
                     </div>
                     <div className="col-2">
                         <div className="form-container">

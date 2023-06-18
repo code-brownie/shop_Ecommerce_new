@@ -7,12 +7,18 @@ const Home = () => {
 <div className="container">
          <div className='row'>
             <div className="col-2">
-                <h1>Give Your Work<br />A New Direction!</h1>
-                <p>Help the World By recycling Your Product With a fair Exchange</p>
-                <Link to="/featured" className='btn'>Explore Now &#8594;</Link>
+                <h1>Join the<br /> ReNewCycle!</h1>
+                <p>Together, we can create a sustainable future, one purchase and donation at a time.</p>
+                <Link to="/featured">
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Explore Now</span>
+                </button></Link>
             </div>
             <div className="col-2">
-                <img src="./images/image1.png" alt="images" />
+                <img src="./images/4894738.png" alt="images" />
             </div>
         </div>
    </div>

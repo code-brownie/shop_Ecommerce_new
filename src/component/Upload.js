@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../style/upload.css';
 
 function Upload(props) {
     const [selectedFile, setSelectedFile] = useState(null);
     const [result, setResult] = useState(null);
+    // const [image, setImage] = useState([]);
+
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
     };

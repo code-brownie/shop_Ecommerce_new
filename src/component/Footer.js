@@ -15,8 +15,9 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="footer-col-2">
-                            <img src="images/logo-white.png" alt="footer" />
-                            <p>Our purpose is to make india Pollution Free</p>
+                            <img src="images/logo_white.png" alt="footer" style={{width:"300px"}}/>
+                            <p>Enabling Sustainable Consumption</p>
+                            <p>and Responsible Disposal</p>
                         </div>
                         <div className="footer-col-3">
                             <h3>Useful Links</h3>
@@ -39,7 +40,7 @@ const Footer = () => {
                         
                     </div>
                     <hr />
-                    <p className='copy'>Copyright 2023 - Give 4 Goods</p>
+                    <p className='copy'>Copyright 2023 - Give 4 Good</p>
                 </div>
             </div>
         </>
