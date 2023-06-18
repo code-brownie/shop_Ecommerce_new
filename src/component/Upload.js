@@ -1,24 +1,13 @@
-import React, { useEffect, useState } from 'react';
-function App() {
+import React, { useState } from 'react';
+import '../style/upload.css';
+
+function Upload(props) {
     const [selectedFile, setSelectedFile] = useState(null);
     const [result, setResult] = useState(null);
-    const [image, setimage] = useState([]);
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
     };
-    const loadData = async () => {
-        let response = await fetch('http://localhost:5000/api/auth/productItems', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-        response = await response.json();
-        setimage(response[0]);
-    }
-    useEffect(() => {
-        loadData();
-    }, [])
+    console.log(props.name.toLowerCase())
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log("The image is sent");
@@ -32,44 +21,42 @@ function App() {
             });
 
             const data = await response.json();
-            // console.log(data);
             setResult(data);
         } catch (error) {
             console.error(error);
         }
     };
 
+    const getProductStatus = (productName) => {
+        const foundProduct = (props.name.toLowerCase() === productName);
+        console.log(foundProduct)
+
+        if (foundProduct) {
+            return "Success";
+        }
+        return "Unsuccessful";
+    };
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="file" accept="image/*" onChange={handleFileChange} />
-                <button type="submit">Submit</button>
+                <input className="input-button" type="file" accept="image/*" onChange={handleFileChange} />
+                <button className="cart-button" type="submit">Submit</button>
             </form>
             {result && (
                 <div>
                     <h2>Result:</h2>
                     <pre>{JSON.stringify(result, null, 2)}</pre>
-                    {
-                       image.map((data)=>{
-                        return(
-                            result.map((e) => {
-                                return (
-                                    <>
-                                        <div>
-                                            {e.name}
-                                        </div>
-                                        <div> {(e.confidence > 0.5 && data.name ) ? ((<div>success</div>)) : "unsuccessfull"}
-                                        </div>
-                                    </>
-                                )
-                            })
-                        )
-                       })
-                    }
+                    {result.map((data) => (
+                        <div key={data.name}>
+                            <div>{data.name}</div>
+                            {getProductStatus(data.name)}
+                        </div>
+                    ))}
                 </div>
             )}
         </div>
     );
 }
 
-export default App;
+export default Upload;

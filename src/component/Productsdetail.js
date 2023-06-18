@@ -40,7 +40,7 @@ const Productsdetail = () => {
                     </div>
                 </div>
             </div >
-            <Upload />
+            <Upload name={name} />
         </>
     )
 }
