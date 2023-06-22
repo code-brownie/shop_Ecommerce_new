@@ -20,7 +20,7 @@ const Card = (props) => {
               <i className="fa-solid fa-star"></i>
               <i className="fa-regular fa-star"></i>
             </div>
-            <h4>{props.price}₹</h4>
+            <h4>₹{props.price}</h4>
           </div>
         </div>
       </div>
