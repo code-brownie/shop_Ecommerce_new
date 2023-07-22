@@ -3,15 +3,15 @@ import '../style/account.css';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthContext';
 
-const Account = (props) => {
-    const { showAlerts } = props;
-    console.log(showAlerts);
-    const { handleLogin, handleSignIn } = useContext(AuthContext);
+const Account = () => {
+    const { handleLogin, handleSignIn, showMessage_success, showMessage_danger } = useContext(AuthContext);
     const Navigate = useNavigate();
     const [isLoginFormVisible, setIsLoginFormVisible] = useState(true);
+    // for Registering Details
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    // For Login Details
     const [loginEmail, setLoginEmail] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
 
@@ -31,9 +31,9 @@ const Account = (props) => {
             });
             const data = await response.json();
             if (data.success) {
-                showAlerts("SignedUp Successfully", "Success");
+                showMessage_success('SignedUp Successfully');
+                localStorage.setItem('authToken', data.authToken);
                 handleSignIn();
-                console.log(data);
                 setEmail('');
                 setName('');
                 setPassword('');
@@ -58,18 +58,17 @@ const Account = (props) => {
                 }),
             });
             const data = await response.json();
-            console.log(data);
             setLoginEmail('');
             setLoginPassword('');
             if (data.success) {
-                showAlerts("Logged In successfully", "success");
+                showMessage_success('Logged In successfully');
                 handleLogin();
                 setIsLoginFormVisible(false);
                 Navigate('/products');
-                // localStorage.setItem('authToken', data.authToken);
+                localStorage.setItem('authToken', data.authToken);
             } else {
                 console.log(data.error);
-                showAlerts("Invalid details", "danger");
+                showMessage_danger('Invalid details');
             }
         } catch (error) {
             console.log(error);
@@ -87,11 +86,11 @@ const Account = (props) => {
     return (
         <div className="account-page">
             <div className="Container">
-                <div className="row">
-                    <div className="col-2">
+                <div className="Row">
+                    <div className="Col-2">
                         <img src="./images/4877806.png" style={{ width: '100%' }} alt="login" />
                     </div>
-                    <div className="col-2">
+                    <div className="Col-2">
                         <div className="form-container">
                             <div className="form-btn">
                                 <span onClick={Login}>Login</span>

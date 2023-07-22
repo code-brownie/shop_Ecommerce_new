@@ -14,7 +14,6 @@ const Navbar = (props) => {
         navigate('/')
 
     };
-
     return (
         <>
             <div className="header">
@@ -25,25 +24,22 @@ const Navbar = (props) => {
                         </div>
                         <nav>
                             <ul>
-                                <li class="list-item">
+                                <li className="list-item">
                                     <Link to="/">Home</Link>
                                 </li>
-                                <li class="list-item">
+                                {isLoggedIn && <li className="list-item">
                                     <Link to="/products">Products</Link>
-                                </li>
-                                <li class="list-item">
-                                    <Link to="/contacts">Contact</Link>
-                                </li>
-                                <li class="list-item">
+                                </li>}
+                                <li className="list-item">
                                     <Link to="/about">About</Link>
                                 </li>
 
                                 {isLoggedIn ? (
                                     <>
-                                        <li class="list-item">
+                                        <li className="list-item">
                                             <Link to="/profile">Profile</Link>
                                         </li>
-                                        <li class="list-item" style={{ cursor: 'pointer' }} onClick={handleLogoutclick}>
+                                        <li className="list-item" style={{ cursor: 'pointer' }} onClick={handleLogoutclick}>
                                             Logout
                                         </li>
                                     </>
@@ -64,7 +60,7 @@ const Navbar = (props) => {
 
                             </ul>
                         </nav>
-                        {isLoggedIn && (<i className="fa-solid fa-cart-shopping" style={{ cursor: 'pointer' }} onClick={() => navigate('/cart')}></i>)}
+                        {isLoggedIn && (<i className=" cart-icon fa-solid fa-cart-shopping" style={{ cursor: 'pointer' }} onClick={() => navigate('/cart')}></i>)}
                     </div>
                 </div>
             </div>

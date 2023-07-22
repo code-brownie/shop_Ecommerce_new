@@ -5,8 +5,8 @@ const Featured = () => {
         <div className="categories">
             <div className="small-container">
                 <h2 className="title">Featured Products</h2>
-                <div className="row">
-                    <div className="col-4">
+                <div className="Row">
+                    <div className="Col-4">
                         <img src="./images/product-1.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -18,7 +18,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-2.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -30,7 +30,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-3.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -41,7 +41,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-4.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -55,8 +55,8 @@ const Featured = () => {
                     </div>
                 </div>
                 <h2 className="title">Latest Products</h2>
-                <div className="row">
-                    <div className="col-4">
+                <div className="Row">
+                    <div className="Col-4">
                         <img src="./images/product-5.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -68,7 +68,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-6.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -80,7 +80,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-7.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -91,7 +91,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-8.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -103,7 +103,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-9.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -115,7 +115,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-10.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -127,7 +127,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-11.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -139,7 +139,7 @@ const Featured = () => {
                         </div>
                         <p>$50.00</p>
                     </div>
-                    <div className="col-4">
+                    <div className="Col-4">
                         <img src="./images/product-12.jpg" alt="img" />
                         <h4>Red Printed T-shirt</h4>
                         <div className="rating">
@@ -156,11 +156,11 @@ const Featured = () => {
             {/* offer */}
             <div className="offer">
                 <div className="small-container">
-                    <div className="row">
-                        <div className="col-2">
+                    <div className="Row">
+                        <div className="Col-2">
                             <img src="./images/exclusive.png" alt="exculsive" />
                         </div>
-                        <div className="col-2">
+                        <div className="Col-2">
                             <p>Exclusively Available on Give 4 Goods</p>
                             <h1>Smart Band 4</h1>
                             <p>

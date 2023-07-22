@@ -1,44 +1,45 @@
-.footer {
+.Footer {
     background: #000;
     color: #8a8a8a;
     font-size: 14px;
     padding: 60px 0 20px;
 }
 
-.footer p {
+.Footer p {
     color: #8a8a8a;
     text-align: center;
 }
 
-.footer h3 {
+.Footer h3 {
     color: #fff;
     margin-bottom: 20px;
+    font-size:20px
 }
 
-.footer.col-1,
-.footer.col-2,
-.footer.col-3,
-.footer.col-4 {
+.Footer.Col-1,
+.Footer.Col-2,
+.Footer.Col-3,
+.Footer.Col-4 {
     min-width: 250px;
     margin-bottom: 20px;
 }
 
-.footer.col-1 {
+.Footer.Col-1 {
     flex-basis: 30%;
 }
 
-.footer.col-2 {
+.Footer.Col-2 {
     flex: 1;
     text-align: center;
 }
 
-.footer.col-2 img {
+.Footer.Col-2 img {
     width: 180px;
     margin-bottom: 20px;
 }
 
-.footer.col-3,
-.footer.col-4 {
+.Footer.Col-3,
+.Footer.Col-4 {
     flex-basis: 12%;
     text-align: center;
 }
@@ -52,12 +53,12 @@ ul{
     width: 140px;
     padding:10px;
 }
-.footer hr{
+.Footer hr{
     border: none;
     background: #b5b5b5;
     height: 1px;
     margin: 20px 0;
 }
-.copy{
+.Copy{
     text-align: center;
 }
