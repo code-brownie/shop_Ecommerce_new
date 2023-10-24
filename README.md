@@ -28,10 +28,6 @@ Join us on our mission to make a difference. Whether you choose to buy, donate, 
 
 ---
 
-## About
-
-This is the about component of the Give4Good project. It contains the information about our story, how our platform works, and the impact we aim to create. Additionally, you can find details about our team members who are working hard to make this project a success.
-
 ## Technologies Used
 
 - React
