@@ -24,9 +24,6 @@ Join us on our mission to make a difference. Whether you choose to buy, donate, 
 - Abhinav Pandey
 - Pratyush Ghatole
 
----
-
----
 
 ## Technologies Used
 
