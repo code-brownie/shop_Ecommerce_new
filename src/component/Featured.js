@@ -16,7 +16,7 @@ const Featured = () => {
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                     <div className="Col-4">
                         <img src="./images/product-2.jpg" alt="img" />
@@ -28,7 +28,7 @@ const Featured = () => {
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                     <div className="Col-4">
                         <img src="./images/product-3.jpg" alt="img" />
@@ -39,7 +39,7 @@ const Featured = () => {
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                     <div className="Col-4">
                         <img src="./images/product-4.jpg" alt="img" />
@@ -51,7 +51,7 @@ const Featured = () => {
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                 </div>
                 <h2 className="title">Latest Products</h2>
@@ -101,7 +101,7 @@ const Featured = () => {
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                     <div className="Col-4">
                         <img src="./images/product-9.jpg" alt="img" />
@@ -113,7 +113,7 @@ const Featured = () => {
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                     <div className="Col-4">
                         <img src="./images/product-10.jpg" alt="img" />
@@ -125,7 +125,7 @@ const Featured = () => {
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                     <div className="Col-4">
                         <img src="./images/product-11.jpg" alt="img" />
@@ -137,7 +137,7 @@ const Featured = () => {
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                     <div className="Col-4">
                         <img src="./images/product-12.jpg" alt="img" />
@@ -149,7 +149,7 @@ const Featured = () => {
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
                         </div>
-                        <p>$50.00</p>
+                        <p>₹50.00</p>
                     </div>
                 </div>
             </div>
