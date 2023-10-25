@@ -1,21 +1,21 @@
-.row {
+.Row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.col-2 {
+.Col-2 {
     flex-basis: 50%;
     min-width: 300px;
 }
 
-.col-2 img {
+.Col-2 img {
     max-width: 100%;
     padding: 50px 0;
 }
 
-.col-2 h1 {
+.Col-2 h1 {
     font-size: 50px;
     line-height: 60px;
     margin: 25px 0;

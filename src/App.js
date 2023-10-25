@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import './App.css';
 import Account from './component/Account';
@@ -14,14 +13,9 @@ import Alerts from './component/Alerts';
 import { CartProvider } from './component/ContexReducer';
 import About from './component/About';
 import Profile from './component/Profile';
+import Payment from './component/Payment';
+
 function App() {
-
-  const [message, setMessage] = useState(null);
-
-  const handleMessageChange = (newMessage) => {
-    setMessage(newMessage);
-  };
-
   const [alert, setAlerts] = useState(null);
   const showAlerts = (message, type) => {
     setAlerts({ message: message, type: type });
@@ -37,12 +31,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/productsdetails" element={<Productsdetail setMessage={handleMessageChange} />} />
+          <Route path="/productsdetails" element={<Productsdetail showAlerts={showAlerts} />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/accounts" element={<Account showAlerts={showAlerts} />} />
-          <Route path="/profile" element={<Profile message={message} />} />
+          <Route path="/accounts" element={<Account />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/featured" element={<Featured />} />
           <Route path="/about" element={<About />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
         <Footer />
       </>

@@ -29,8 +29,10 @@ a {
     color: #544d4d;
     font-weight:bold;
 }
-
-
+.cart-icon{
+    position:relative;
+    top:-10px;
+}
 .Container {
     max-width: 1300px;
     margin: auto;

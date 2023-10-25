@@ -3,10 +3,10 @@ import '../style/Footer.css'
 const Footer = () => {
     return (
         <>
-            <div className="footer">
+            <div className="Footer">
                 <div className="Container">
-                    <div className="row">
-                        <div className="footer-col-1">
+                    <div className="Row">
+                        <div className="Footer-Col-1">
                             <h3>Download Our App</h3>
                             <p>Dowload App for Android and ios mobile phone.</p>
                             <div className="app-logo">
@@ -14,12 +14,12 @@ const Footer = () => {
                             <img src="./images/play-store.png" alt="logo" />
                             </div>
                         </div>
-                        <div className="footer-col-2">
-                            <img src="images/logo_white.png" alt="footer" style={{width:"300px"}}/>
+                        <div className="Footer-Col-2">
+                            <img src="images/logo_white.png" alt="Footer" style={{width:"300px"}}/>
                             <p>Enabling Sustainable Consumption</p>
                             <p>and Responsible Disposal</p>
                         </div>
-                        <div className="footer-col-3">
+                        <div className="Footer-Col-3">
                             <h3>Useful Links</h3>
                             <ul>
                                 <li>Coupons</li>
@@ -28,7 +28,7 @@ const Footer = () => {
                                 <li>Join Affiliate</li>
                             </ul>
                         </div>
-                        <div className="footer-col-4">
+                        <div className="Footer-Col-4">
                             <h3>Useful Links</h3>
                             <ul>
                                 <li>Facebook</li>

@@ -13,15 +13,10 @@ const Products = () => {
         });
         response = await response.json();
         setshopItems(response[0]);
-        // console.log(response[[0]]);
     }
     useEffect(() => {
         loadData();
     }, [])
-
-
-
-
     return (
         <>
             <h2 className="title">All Products</h2>

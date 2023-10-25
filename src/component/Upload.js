@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AuthContext } from './AuthContext';
 import '../style/upload.css';
 
 function Upload(props) {
-    const {setMessage,handleFoundProduct} = props;
-    console.log(setMessage)
+    const { handleFoundProduct, showMessage_success, showMessage_danger } = useContext(AuthContext);
     const [selectedFile, setSelectedFile] = useState(null);
-    const [result, setResult] = useState(null);
-    // const [image, setImage] = useState([]);
-    let foundProduct = false;
+    const [labelText, setLabelText] = useState('Upload Image');
     const handleFileChange = (event) => {
+        const file = event.target.files[0];
         setSelectedFile(event.target.files[0]);
+        setLabelText(file.name.toUpperCase());
     };
-    console.log(props.name.toLowerCase())
     const handleSubmit = async (event) => {
         event.preventDefault();
+        if (selectedFile === null) showMessage_danger('please upload an image');
         console.log("The image is sent");
         const formData = new FormData();
         formData.append('image', selectedFile);
@@ -25,45 +25,29 @@ function Upload(props) {
             });
 
             const data = await response.json();
-            console.log(data)
-            setResult(data);
+            if (data[0].name === props.name.toLowerCase()) {
+                handleFoundProduct(true)
+                showMessage_success('Verified Successfully!');
+            }
+            else {
+                showMessage_danger('Please Upload Again!');
+                handleFoundProduct(false)
+            }
         } catch (error) {
             console.error(error);
         }
+        setLabelText('Upload Image');
     };
 
-    const getProductStatus = (productName) => {
-        foundProduct = (props.name.toLowerCase() === productName);
-        props.setMessage(foundProduct);
-        handleFoundProduct(foundProduct);
-        console.log(foundProduct)
-
-        if (foundProduct) {
-            return "Success";
-        }
-        return "Unsuccessful";
-    };
 
     return (
-        <div>
+        <>
             <form onSubmit={handleSubmit}>
-                <input className="input-button" type="file" accept="image/*" onChange={handleFileChange} />
+                <label htmlFor="input-button">{labelText}</label>
+                <input id="input-button" type="file" accept="image/*" onChange={handleFileChange} />
                 <button className="cart-button" type="submit">Submit</button>
             </form>
-            {result && (
-                <div>
-                    <h2>Result:</h2>
-                    <pre>{JSON.stringify(result, null, 2)}</pre>
-                    {result.map((data) => (
-                        <div key={data.name}>
-                            <div>{data.name}</div>
-                            {getProductStatus(data.name)}
-
-                        </div>
-                    ))}
-                </div>
-            )}
-        </div>
+        </>
     );
 }
 
